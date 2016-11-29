@@ -19,5 +19,12 @@ enum
 };
 
 #include <link.h>
+#include <sys/ptrace.h>
 #include <sys/reg.h>
 #include <sys/user.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+#include "level1.hh"
+#include "checker.hh"
+#include "display.hh"

@@ -27,3 +27,11 @@
 *.exe
 *.out
 *.app
+a.out
+main
+
+# Others
+*sw?
+*~
+.__*
+vgcore*
