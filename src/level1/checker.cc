@@ -9,5 +9,11 @@ void display_usage()
 
 void check_binary(char *bin)
 {
-
+  if (access(bin, X_OK) != 0)
+  {
+    std::cerr << "./mem_strace: Can't stat '"
+              << bin
+              << "': No such file or directory"
+              << std::endl;
+  }
 }

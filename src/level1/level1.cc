@@ -2,11 +2,15 @@
 
 void tracee(int argc, char **argv)
 {
-  
+  char *tab = new int[argc + 1];
+
+  for (int i = 0; i < argc; i++)
+    tab[i] = argv[i]
+  tab[argc] = nullptr;
 
   ptrace(PTRACE_TRACEME, 0, 0, 0);
-  kill();
-  execve();
+  kill(getpid(), SIGSTOP);
+  execve(tab[0], tab, nullptr);
 }
 
 void tracer(pid_t pid)
