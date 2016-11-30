@@ -1,11 +1,13 @@
 #include "tools.hh"
+#include "checker.hh"
+#include "level1.hh"
 
 int main(int argc, char **argv)
 {
   if (argc < 2)
     display_usage();
 
-  check_binary(argv[i]);
+  check_binary(argv[1]);
 
   pid_t pid = fork();
 

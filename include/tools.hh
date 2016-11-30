@@ -18,13 +18,14 @@ enum
   SC_EXITGROUP  = 231
 };
 
+#include <iostream>
+
 #include <link.h>
+#include <stdlib.h>
+#include <sygnal.h>
 #include <sys/ptrace.h>
 #include <sys/reg.h>
-#include <sys/user.h>
 #include <sys/types.h>
+#include <sys/user.h>
+#include <sys/wait.h>
 #include <unistd.h>
-
-#include "level1.hh"
-#include "checker.hh"
-#include "display.hh"
